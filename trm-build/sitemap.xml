@@ -53,6 +53,18 @@
     <priority>0.1</priority>
   </url>
 
+  <!-- Research / comparison pages -->
+  <url>
+    <loc>https://trmgf.com/garage-floor-coating-cost-arizona.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://trmgf.com/polyaspartic-vs-epoxy-garage-floor-arizona.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
   <!-- City pages -->
   <url>
     <loc>https://trmgf.com/garage-floor-coating-gilbert-az.html</loc>
