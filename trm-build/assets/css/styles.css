@@ -477,13 +477,13 @@ button { cursor: pointer; font-family: inherit; }
 }
 .hero-h1 {
   font-family: var(--font-display);
-  font-size: clamp(34px, 6vw, 62px);
+  font-size: clamp(26px, 3.8vw, 44px);
   font-weight: 900;
   text-transform: uppercase;
   color: var(--white);
-  line-height: 0.97;
+  line-height: 1.0;
   letter-spacing: 0.01em;
-  margin-bottom: 20px;
+  margin-bottom: 16px;
 }
 .hero-h1 em {
   font-style: normal;
@@ -970,28 +970,41 @@ details.faq-item[open] .faq-toggle { background: var(--concrete); }
   color: rgba(255,255,255,0.85);
   margin-top: 4px;
 }
-/* CTA band buttons — equal width */
+/* CTA band buttons — equal size, equal spacing */
 .cta-band .btn-group {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 12px;
   width: 100%;
 }
 .cta-band .btn {
   width: 100%;
   justify-content: center;
   text-align: center;
+  height: 52px;
+  box-sizing: border-box;
+  padding: 0 36px;
 }
 @media (min-width: 640px) {
   .cta-band .btn-group {
-    flex-direction: row;
-    width: auto;
+    flex-direction: column;
+    width: 260px;
+    flex-shrink: 0;
   }
   .cta-band .btn {
-    width: auto;
-    min-width: 240px;
-    padding-left: 32px;
-    padding-right: 32px;
+    width: 260px;
+    min-width: unset;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+@media (min-width: 900px) {
+  .cta-band .btn-group {
+    flex-direction: column;
+    width: 280px;
+  }
+  .cta-band .btn {
+    width: 280px;
   }
 }
 
