@@ -6,6 +6,52 @@
 (function () {
   'use strict';
 
+  /* ── DESKTOP DROPDOWN MENUS ── */
+  document.querySelectorAll('.nav-dropdown-trigger').forEach(function(trigger) {
+    trigger.addEventListener('click', function(e) {
+      e.stopPropagation();
+      var li = trigger.closest('li');
+      var dropdown = li.querySelector('.nav-dropdown');
+      var isOpen = dropdown.classList.contains('open');
+
+      // Close all other dropdowns first
+      document.querySelectorAll('.nav-dropdown.open').forEach(function(d) {
+        d.classList.remove('open');
+        d.closest('li').classList.remove('open');
+        d.closest('li').querySelector('.nav-dropdown-trigger').setAttribute('aria-expanded', 'false');
+      });
+
+      // Toggle this one
+      if (!isOpen) {
+        dropdown.classList.add('open');
+        li.classList.add('open');
+        trigger.setAttribute('aria-expanded', 'true');
+      }
+    });
+  });
+
+  // Close dropdowns on outside click — only if click is outside the nav
+  document.addEventListener('click', function(e) {
+    if (!e.target.closest('.nav-menu')) {
+      document.querySelectorAll('.nav-dropdown.open').forEach(function(d) {
+        d.classList.remove('open');
+        d.closest('li').classList.remove('open');
+        d.closest('li').querySelector('.nav-dropdown-trigger').setAttribute('aria-expanded', 'false');
+      });
+    }
+  });
+
+  // Close dropdowns on Escape
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+      document.querySelectorAll('.nav-dropdown.open').forEach(function(d) {
+        d.classList.remove('open');
+        d.closest('li').classList.remove('open');
+        d.closest('li').querySelector('.nav-dropdown-trigger').setAttribute('aria-expanded', 'false');
+      });
+    }
+  });
+
   /* ── MOBILE ACCORDION (Services + Service Areas) ── */
   document.querySelectorAll('.mobile-section-toggle').forEach(function(btn) {
     btn.addEventListener('click', function() {
