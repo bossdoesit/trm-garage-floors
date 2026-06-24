@@ -901,6 +901,17 @@ details.faq-item[open] .faq-toggle { background: var(--concrete); }
 }
 
 /* ── REVIEW CARDS ── */
+.review-card--dark {
+  background: var(--concrete);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: var(--radius-md);
+  padding: 24px;
+}
+.review-card--dark .review-stars { color: var(--gold); font-size: 16px; letter-spacing: 2px; margin-bottom: 10px; }
+.review-card--dark .review-text { font-size: 14px; color: rgba(255,255,255,0.82); line-height: 1.75; margin-bottom: 14px; font-style: italic; }
+.review-card--dark .review-author { font-size: 13px; font-weight: 700; color: var(--white); }
+.review-card--dark .review-location { font-size: 12px; color: rgba(255,255,255,0.5); }
+
 .review-card {
   background: var(--white);
   border: 1px solid var(--gray-border);
