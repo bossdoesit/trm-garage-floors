@@ -21,15 +21,98 @@
 <body>
   <header class="site-header">
     <div class="container nav-inner">
-      <a href="/index.html" class="nav-logo"><img src="/assets/images/trm-logo.png" alt="TRM Garage Floors" class="nav-logo-img" width="50" height="50" loading="eager"><div class="nav-logo-text">TRM Garage Floors<span>🇺🇸 Floors in One Day</span></div></a>
-      <nav aria-label="Main navigation"><ul class="nav-menu" role="list"><li><a href="/index.html">Home</a></li><li><a href="/garage-floor-coating.html">Garage Floors</a></li><li><a href="/patio-deck-resurfacing.html">Patio &amp; Deck</a></li><li><a href="/polyaspartic-coatings.html">Polyaspartic</a></li><li><a href="/commercial-floor-coatings.html">Commercial</a></li><li><a href="/gallery.html">Gallery</a></li><li><a href="/about.html">About</a></li><li><a href="/contact.html">Contact</a></li></ul></nav>
-      <div class="nav-actions"><a href="tel:+16023018134" class="nav-phone">(602) 301-8134</a><a href="/contact.html" class="btn btn-primary btn-sm">Free Quote</a><button class="nav-toggle" id="nav-toggle" aria-label="Toggle mobile menu" aria-expanded="false" aria-controls="mobile-menu"><span></span><span></span><span></span></button></div>
+      <a href="/index.html" class="nav-logo" aria-label="TRM Garage Floors home">
+        <img src="/assets/images/trm-logo.png" alt="TRM Garage Floors" class="nav-logo-img" width="50" height="50" loading="eager">
+        <div class="nav-logo-text">TRM Garage Floors<span>🇺🇸 Floors in One Day</span></div>
+      </a>
+      <nav aria-label="Main navigation">
+        <ul class="nav-menu" role="list">
+          <li><a href="/index.html">Home</a></li>
+          <li>
+            <button class="nav-dropdown-trigger" aria-haspopup="true" aria-expanded="false">
+              Services <span class="nav-arrow"></span>
+            </button>
+            <ul class="nav-dropdown" role="menu">
+              <li><a href="/garage-floor-coating.html" role="menuitem">Garage Floor Coating</a></li>
+              <li><a href="/patio-deck-resurfacing.html" role="menuitem">Patio &amp; Deck Resurfacing</a></li>
+              <li><a href="/polyaspartic-coatings.html" role="menuitem">Polyaspartic Coatings</a></li>
+              <li><a href="/commercial-floor-coatings.html" role="menuitem">Commercial Floor Coatings</a></li>
+            </ul>
+          </li>
+          <li>
+            <button class="nav-dropdown-trigger" aria-haspopup="true" aria-expanded="false">
+              Service Areas <span class="nav-arrow"></span>
+            </button>
+            <ul class="nav-dropdown" role="menu">
+              <li><a href="/garage-floor-coating-gilbert-az.html" role="menuitem">Gilbert, AZ</a></li>
+              <li><a href="/garage-floor-coating-mesa-az.html" role="menuitem">Mesa, AZ</a></li>
+              <li><a href="/garage-floor-coating-chandler-az.html" role="menuitem">Chandler, AZ</a></li>
+              <li><a href="/garage-floor-coating-queen-creek-az.html" role="menuitem">Queen Creek, AZ</a></li>
+              <li><a href="/garage-floor-coating-san-tan-valley-az.html" role="menuitem">San Tan Valley, AZ</a></li>
+              <li><a href="/garage-floor-coating-scottsdale-az.html" role="menuitem">Scottsdale, AZ</a></li>
+              <li><a href="/garage-floor-coating-apache-junction-az.html" role="menuitem">Apache Junction, AZ</a></li>
+              <li><a href="/garage-floor-coating-fountain-hills-az.html" role="menuitem">Fountain Hills, AZ</a></li>
+              <li><a href="/garage-floor-coating-tempe-az.html" role="menuitem">Tempe, AZ</a></li>
+              <li><a href="/garage-floor-coating-sun-lakes-az.html" role="menuitem">Sun Lakes, AZ</a></li>
+              <li><a href="/garage-floor-coating-paradise-valley-az.html" role="menuitem">Paradise Valley, AZ</a></li>
+            </ul>
+          </li>
+          <li><a href="/gallery.html">Gallery</a></li>
+          <li><a href="/about.html">About</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="nav-actions">
+        <a href="tel:+16023018134" class="nav-phone" aria-label="Call TRM Garage Floors">(602) 301-8134</a>
+        <a href="/contact.html" class="btn btn-primary btn-sm">Free Quote</a>
+        <button class="nav-toggle" id="nav-toggle" aria-label="Toggle mobile menu" aria-expanded="false" aria-controls="mobile-menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
     </div>
-    <nav class="mobile-menu" id="mobile-menu" aria-label="Mobile navigation"><a href="/index.html">Home</a><a href="/garage-floor-coating.html">Garage Floor Coating</a><a href="/patio-deck-resurfacing.html">Patio &amp; Deck Resurfacing</a><a href="/polyaspartic-coatings.html">Polyaspartic Coatings</a><a href="/commercial-floor-coatings.html">Commercial Floor Coatings</a><a href="/gallery.html">Gallery</a><a href="/reviews.html">Reviews</a><a href="/about.html">About</a><a href="/contact.html">Contact</a><a href="/contact.html" class="mobile-cta">Get a Free Quote</a><a href="tel:+16023018134" class="mobile-cta" style="background:var(--black);margin-top:4px;">(602) 301-8134</a></nav>
+    <nav class="mobile-menu" id="mobile-menu" aria-label="Mobile navigation">
+      <a href="/index.html">Home</a>
+      <button class="mobile-section-toggle" aria-expanded="false">Services <span class="mob-arrow"></span></button>
+      <div class="mobile-submenu">
+        <a href="/garage-floor-coating.html">Garage Floor Coating</a>
+        <a href="/patio-deck-resurfacing.html">Patio &amp; Deck Resurfacing</a>
+        <a href="/polyaspartic-coatings.html">Polyaspartic Coatings</a>
+        <a href="/commercial-floor-coatings.html">Commercial Floor Coatings</a>
+      </div>
+      <button class="mobile-section-toggle" aria-expanded="false">Service Areas <span class="mob-arrow"></span></button>
+      <div class="mobile-submenu">
+        <a href="/garage-floor-coating-gilbert-az.html">Gilbert, AZ</a>
+        <a href="/garage-floor-coating-mesa-az.html">Mesa, AZ</a>
+        <a href="/garage-floor-coating-chandler-az.html">Chandler, AZ</a>
+        <a href="/garage-floor-coating-queen-creek-az.html">Queen Creek, AZ</a>
+        <a href="/garage-floor-coating-san-tan-valley-az.html">San Tan Valley, AZ</a>
+        <a href="/garage-floor-coating-scottsdale-az.html">Scottsdale, AZ</a>
+        <a href="/garage-floor-coating-apache-junction-az.html">Apache Junction, AZ</a>
+        <a href="/garage-floor-coating-fountain-hills-az.html">Fountain Hills, AZ</a>
+        <a href="/garage-floor-coating-tempe-az.html">Tempe, AZ</a>
+        <a href="/garage-floor-coating-sun-lakes-az.html">Sun Lakes, AZ</a>
+        <a href="/garage-floor-coating-paradise-valley-az.html">Paradise Valley, AZ</a>
+      </div>
+      <a href="/gallery.html">Gallery</a>
+      <a href="/about.html">About</a>
+      <a href="/contact.html">Contact</a>
+      <a href="/contact.html" class="mobile-cta">Get a Free Quote</a>
+      <a href="tel:+16023018134" class="mobile-cta" style="background:var(--black);margin-top:4px;">(602) 301-8134</a>
+    </nav>
   </header>
   <div class="trust-bar"><div class="container trust-bar-inner"><div class="trust-item"><span class="trust-item-icon">&#11044;</span> 100% Polyaspartic</div><div class="trust-item"><span class="trust-item-icon">&#11044;</span> One-Day Install</div><div class="trust-item"><span class="trust-item-icon">&#11044;</span> ROC #332227</div><div class="trust-item"><span class="trust-item-icon">&#11044;</span> East Valley Based</div><div class="trust-item"><span class="trust-item-icon">&#11044;</span> Free Estimates</div><div class="trust-item"><span class="trust-item-icon">&#11044;</span> 🇺🇸 Veteran-Owned</div></div></div>
   <nav class="breadcrumb" aria-label="Breadcrumb"><div class="container"><ol class="breadcrumb-list"><li><a href="/index.html">Home</a></li><li class="sep">›</li><li>Reviews</li></ol></div></nav>
-  <section class="page-hero"><div class="container page-hero-inner"><p class="page-hero-pretag">What Customers Say</p><h1 class="page-hero-h1">Customer Reviews</h1><p class="page-hero-sub">TRM Garage Floors serves homeowners and businesses across the East Valley. Here's what customers say about their experience.</p><div class="btn-group"><a href="/contact.html" class="btn btn-primary btn-lg">Get a Free Quote</a><a href="https://www.google.com/maps/place/TRM+Garage+Floors/data=!4m2!3m1!1s0x0:0xf4128779f01dd8b6?sa=X&ved=1t:2428&ictx=111" class="btn btn-secondary btn-lg">Read Reviews on Google</a></div></div></section>
+  <section class="page-hero">
+    <div class="container page-hero-inner">
+      <p class="page-hero-pretag">East Valley, Arizona</p>
+      <h1 class="page-hero-h1">What Customers Say<br>About <em>TRM Garage Floors</em></h1>
+      <p class="page-hero-sub">Real reviews from verified East Valley homeowners. Every review is posted directly to Google — unfiltered and unedited. See what people say after their floor is done.</p>
+      <div class="btn-group">
+        <a href="/contact.html" class="btn btn-primary btn-lg">Get a Free Quote</a>
+        <a href="https://www.google.com/maps/place/TRM+Garage+Floors/data=!4m2!3m1!1s0x0:0xf4128779f01dd8b6?sa=X&amp;ved=1t:2428&amp;ictx=111" class="btn btn-secondary btn-lg">Read Reviews on Google</a>
+      </div>
+    </div>
+  </section>
 
   <section class="section bg-white">
     <div class="container">

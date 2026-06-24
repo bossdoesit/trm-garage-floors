@@ -6,6 +6,15 @@
 (function () {
   'use strict';
 
+  /* ── MOBILE ACCORDION (Services + Service Areas) ── */
+  document.querySelectorAll('.mobile-section-toggle').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      var submenu = btn.nextElementSibling;
+      var isOpen = submenu.classList.toggle('open');
+      btn.classList.toggle('open', isOpen);
+    });
+  });
+
   /* ── MOBILE MENU ── */
   const toggle = document.getElementById('nav-toggle');
   const mobileMenu = document.getElementById('mobile-menu');
