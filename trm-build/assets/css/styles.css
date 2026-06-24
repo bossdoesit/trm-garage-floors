@@ -6,13 +6,19 @@
 
 /* ── RESET & BASE ── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; font-size: 16px; }
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+  overflow-x: hidden;
+}
 body {
   font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
   color: var(--text-body);
   background: var(--white);
   line-height: 1.65;
   -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+  max-width: 100vw;
 }
 img { max-width: 100%; height: auto; display: block; }
 a { color: inherit; text-decoration: none; }
@@ -74,6 +80,7 @@ button { cursor: pointer; font-family: inherit; }
   max-width: var(--max-width);
   margin: 0 auto;
   padding: 0 var(--gutter);
+  width: 100%;
 }
 .sr-only {
   position: absolute; width: 1px; height: 1px;
@@ -140,13 +147,25 @@ button { cursor: pointer; font-family: inherit; }
   align-items: center;
   gap: 16px;
   margin-bottom: 28px;
+  min-width: 0;
 }
-.heading-bar .section-title { margin-bottom: 0; white-space: nowrap; }
+.heading-bar .section-title {
+  margin-bottom: 0;
+  white-space: normal;
+  word-break: break-word;
+  min-width: 0;
+}
 .heading-bar .rule {
   flex: 1;
   height: 3px;
   background: var(--red);
   min-width: 20px;
+  flex-shrink: 1;
+}
+/* Hide decorative rule on mobile — prevents title + rule from overflowing */
+@media (max-width: 639px) {
+  .heading-bar .rule { display: none; }
+  .heading-bar { gap: 0; }
 }
 
 /* ── BUTTONS ── */
@@ -234,6 +253,8 @@ button { cursor: pointer; font-family: inherit; }
   justify-content: space-between;
   height: 64px;
   gap: 8px;
+  max-width: 100%;
+  overflow: hidden;
 }
 .nav-logo {
   display: flex;
@@ -424,9 +445,12 @@ button { cursor: pointer; font-family: inherit; }
   background:
     linear-gradient(to right, rgba(0,0,0,0.72) 0%, rgba(0,0,0,0.35) 55%, rgba(0,0,0,0.15) 100%),
     url('/assets/images/hero-bg.jpg') center center / cover no-repeat;
-  padding: var(--space-3xl) 0 80px;
+  padding: 56px 0 64px;
   position: relative;
   overflow: hidden;
+}
+@media (min-width: 900px) {
+  .hero { padding: var(--space-3xl) 0 80px; }
 }
 .hero::before {
   content: '';
@@ -440,7 +464,7 @@ button { cursor: pointer; font-family: inherit; }
   z-index: 2;
   display: grid;
   grid-template-columns: 1fr;
-  gap: 40px;
+  gap: 0;
   align-items: center;
 }
 .hero-pretag {
@@ -498,6 +522,10 @@ button { cursor: pointer; font-family: inherit; }
   border: 1px solid rgba(255,255,255,0.1);
   border-radius: var(--radius-md);
   padding: 28px 28px 32px;
+  display: none;
+}
+@media (min-width: 900px) {
+  .hero-form-panel { display: block; }
 }
 .hero-form-logo {
   width: 64px;
