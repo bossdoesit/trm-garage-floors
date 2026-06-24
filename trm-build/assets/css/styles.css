@@ -1109,12 +1109,15 @@ details.faq-item[open] .faq-toggle { background: var(--concrete); }
   border-top: 3px solid var(--gray-border);
   padding: 56px 0 24px;
 }
+
+/* Mobile: 2-column grid, brand card full-width at top */
 .footer-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 28px 20px;
   margin-bottom: 40px;
 }
+
 /* Brand card spans full width on mobile */
 .footer-card {
   grid-column: 1 / -1;
@@ -1122,6 +1125,29 @@ details.faq-item[open] .faq-toggle { background: var(--concrete); }
   border-radius: var(--radius-md);
   padding: 22px 18px;
   text-align: center;
+}
+
+/* Desktop: 4 link columns across the top, brand card bottom-left */
+@media (min-width: 900px) {
+  .footer-grid {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 36px 32px;
+  }
+  /* Link columns — row 1 */
+  .footer-grid > div:nth-child(2) { grid-column: 1; grid-row: 1; }
+  .footer-grid > div:nth-child(3) { grid-column: 2; grid-row: 1; }
+  .footer-grid > div:nth-child(4) { grid-column: 3; grid-row: 1; }
+  .footer-grid > div:nth-child(5) { grid-column: 4; grid-row: 1; }
+  /* Brand card — row 2, left column, spans 1 col */
+  .footer-card {
+    grid-column: 1;
+    grid-row: 2;
+    text-align: left;
+  }
+  .footer-logo-wrap { margin: 0 0 10px; }
+  .footer-social { justify-content: flex-start; }
+  .footer-card-btns { grid-template-columns: 1fr 1fr; }
 }
 .footer-logo-wrap {
   width: 56px;
@@ -1263,7 +1289,6 @@ details.faq-item[open] .faq-toggle { background: var(--concrete); }
   .hero-inner { grid-template-columns: 1fr 1fr; gap: 60px; }
   .grid-3 { grid-template-columns: repeat(3, 1fr); }
   .areas-grid { grid-template-columns: repeat(4, 1fr); }
-  .footer-grid { grid-template-columns: 240px 1fr 1fr 1fr 160px; }
   .footer-bottom { flex-direction: row; justify-content: space-between; }
 }
 
