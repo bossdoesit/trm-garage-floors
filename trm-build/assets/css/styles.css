@@ -726,8 +726,11 @@ button { cursor: pointer; font-family: inherit; }
   border: 1px solid var(--gray-border);
   border-radius: var(--radius-md);
   border-top: 4px solid var(--red);
-  padding: 28px 24px;
+  padding: 22px 20px;
   transition: box-shadow var(--transition), transform var(--transition);
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
 }
 .card:hover {
   box-shadow: var(--shadow-md);
@@ -738,12 +741,25 @@ button { cursor: pointer; font-family: inherit; }
   border: 1px solid rgba(255,255,255,0.1);
   border-top: 4px solid var(--red);
   border-radius: var(--radius-md);
-  padding: 28px 24px;
+  padding: 22px 20px;
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
 }
 .card-icon {
-  font-size: 30px;
-  margin-bottom: 14px;
-  display: block;
+  font-size: 26px;
+  margin-bottom: 0;
+  display: flex;
+  align-items: flex-start;
+  flex-shrink: 0;
+  line-height: 1.2;
+  margin-top: 2px;
+  width: 32px;
+  justify-content: center;
+}
+.card-content {
+  flex: 1;
+  min-width: 0;
 }
 .card-title {
   font-family: var(--font-display);
@@ -752,7 +768,7 @@ button { cursor: pointer; font-family: inherit; }
   text-transform: uppercase;
   letter-spacing: 0.05em;
   color: var(--text-dark);
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
 .card-title--white { color: var(--white); }
 .card-body {
