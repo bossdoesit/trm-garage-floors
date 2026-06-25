@@ -1,5 +1,0 @@
-# Prevent staging site from being indexed
-# Delete this file at DNS cutover to production
-
-https://trm-garage-floors.pages.dev/*
-  X-Robots-Tag: noindex, nofollow

@@ -1,6 +1,0 @@
-# Prevent staging site from being indexed by search engines
-# This file is read by Cloudflare Pages
-# Remove or update when pointing custom domain
-
-https://trm-garage-floors.pages.dev/*
-  X-Robots-Tag: noindex, nofollow
