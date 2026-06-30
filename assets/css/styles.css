@@ -527,6 +527,39 @@ button { cursor: pointer; font-family: inherit; }
   min-height: 52px;
 }
 
+/* ── SERVICES + MASCOT LAYOUT ── */
+.services-mascot-layout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+}
+.services-mascot-img {
+  max-width: 170px;
+  height: auto;
+  margin: -8px 0 8px;
+}
+.services-cards-grid {
+  width: 100%;
+}
+@media (min-width: 900px) {
+  .services-mascot-layout {
+    flex-direction: row;
+    align-items: center;
+    gap: 32px;
+  }
+  .services-cards-grid {
+    flex: 1;
+    order: 1;
+  }
+  .services-mascot-img {
+    order: 2;
+    max-width: 260px;
+    margin: 0;
+    flex-shrink: 0;
+  }
+}
+
 /* ── TRUST BAR ── */
 .trust-bar {
   background: var(--white);
