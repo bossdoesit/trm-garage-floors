@@ -1494,7 +1494,7 @@ details.faq-item[open] .faq-toggle { background: var(--concrete); }
 .footer-bottom-links a:hover { color: var(--red); }
 .footer-boss-credit { font-size: 12px; color: var(--gray-mid); white-space: nowrap; margin-top: 6px; }
 .footer-boss-credit a { color: var(--red); text-decoration: none; transition: color var(--transition); }
-.footer-boss-credit a:hover { color: var(--white); }
+.footer-boss-credit a:hover { color: #000000; }
 
 /* Image placeholder utility */
 .img-placeholder {
