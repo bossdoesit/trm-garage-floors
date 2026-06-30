@@ -1489,12 +1489,12 @@ details.faq-item[open] .faq-toggle { background: var(--concrete); }
   align-items: flex-start;
 }
 .footer-bottom-text { font-size: 12px; color: var(--gray-mid); }
-.footer-bottom-links { display: flex; gap: 20px; flex-wrap: wrap; }
+.footer-bottom-links { display: flex; gap: 20px; flex-wrap: wrap; justify-content: center; }
 .footer-bottom-links a { font-size: 12px; color: var(--gray-mid); transition: color var(--transition); }
 .footer-bottom-links a:hover { color: var(--red); }
-.footer-boss-credit { font-size: 11px; color: rgba(255,255,255,0.3); white-space: nowrap; margin-top: 6px; }
-.footer-boss-credit a { color: rgba(255,255,255,0.3); text-decoration: none; transition: color var(--transition); }
-.footer-boss-credit a:hover { color: rgba(255,255,255,0.7); }
+.footer-boss-credit { font-size: 12px; color: var(--gray-mid); white-space: nowrap; margin-top: 6px; }
+.footer-boss-credit a { color: var(--red); text-decoration: none; transition: color var(--transition); }
+.footer-boss-credit a:hover { color: var(--white); }
 
 /* Image placeholder utility */
 .img-placeholder {
