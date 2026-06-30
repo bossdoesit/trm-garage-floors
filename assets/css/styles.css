@@ -1492,6 +1492,9 @@ details.faq-item[open] .faq-toggle { background: var(--concrete); }
 .footer-bottom-links { display: flex; gap: 20px; flex-wrap: wrap; }
 .footer-bottom-links a { font-size: 12px; color: var(--gray-mid); transition: color var(--transition); }
 .footer-bottom-links a:hover { color: var(--red); }
+.footer-boss-credit { font-size: 11px; color: rgba(255,255,255,0.3); white-space: nowrap; margin-top: 6px; }
+.footer-boss-credit a { color: rgba(255,255,255,0.3); text-decoration: none; transition: color var(--transition); }
+.footer-boss-credit a:hover { color: rgba(255,255,255,0.7); }
 
 /* Image placeholder utility */
 .img-placeholder {
@@ -1531,7 +1534,8 @@ details.faq-item[open] .faq-toggle { background: var(--concrete); }
   .hero-inner { grid-template-columns: 1fr 1fr; gap: 60px; }
   .grid-3 { grid-template-columns: repeat(3, 1fr); }
   .areas-grid { grid-template-columns: repeat(4, 1fr); }
-  .footer-bottom { flex-direction: row; justify-content: space-between; }
+  .footer-bottom { flex-direction: row; justify-content: space-between; align-items: center; }
+  .footer-boss-credit { margin-top: 0; margin-left: auto; padding-left: 24px; }
 }
 
 /* ── RESPONSIVE — WIDE 1200px ── */
