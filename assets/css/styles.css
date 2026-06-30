@@ -545,18 +545,26 @@ button { cursor: pointer; font-family: inherit; }
 @media (min-width: 900px) {
   .services-mascot-layout {
     flex-direction: row;
-    align-items: center;
+    align-items: stretch;
     gap: 32px;
   }
   .services-cards-grid {
     flex: 1;
     order: 1;
   }
-  .services-mascot-img {
+  .services-mascot-wrap {
     order: 2;
-    max-width: 260px;
-    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     flex-shrink: 0;
+  }
+  .services-mascot-img {
+    width: auto;
+    max-width: 280px;
+    height: 100%;
+    object-fit: contain;
+    margin: 0;
   }
 }
 
@@ -842,6 +850,12 @@ button { cursor: pointer; font-family: inherit; }
   flex-direction: column;
   justify-content: flex-end;
   transition: box-shadow var(--transition);
+}
+@media (min-width: 900px) {
+  .service-card {
+    aspect-ratio: 1 / 1;
+    min-height: 0;
+  }
 }
 .service-card:hover { box-shadow: var(--shadow-lg); }
 .service-card-img {
