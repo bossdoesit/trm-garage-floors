@@ -624,12 +624,23 @@ button { cursor: pointer; font-family: inherit; }
 .hero {
   background:
     linear-gradient(to right, rgba(0,0,0,0.72) 0%, rgba(0,0,0,0.35) 55%, rgba(0,0,0,0.15) 100%),
-    url('/assets/images/hero-bg.jpg') center center / cover no-repeat;
+    url('/assets/images/hero-bg.jpg') left center / cover no-repeat;
   padding: 56px 0 64px;
   position: relative;
 }
 @media (min-width: 900px) {
   .hero { padding: var(--space-3xl) 0 80px; }
+}
+/* SEO-crawlable image — mirrors the CSS background-image for search engines,
+   positioned behind the gradient/content layers, visually redundant but indexable */
+.hero-bg-img-seo {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: left center;
+  z-index: 0;
 }
 .hero::before {
   content: '';
@@ -1300,7 +1311,7 @@ details.faq-item[open] .faq-toggle { background: var(--concrete); }
 .page-hero {
   background:
     linear-gradient(to right, rgba(0,0,0,0.78) 0%, rgba(0,0,0,0.55) 60%, rgba(0,0,0,0.3) 100%),
-    url('/assets/images/hero-bg.jpg') center 30% / cover no-repeat;
+    url('/assets/images/hero-bg.jpg') left center / cover no-repeat;
   padding: 72px 0 80px;
   position: relative;
 }
@@ -1545,12 +1556,30 @@ details.faq-item[open] .faq-toggle { background: var(--concrete); }
   .site-header, .cta-band, .hero-form-panel { display: none; }
 }
 
-/* ── HERO IMAGE — mobile uses lighter version ── */
+/* ── HERO IMAGE — mobile uses tight portrait crop ── */
 @media (max-width: 639px) {
   .hero, .page-hero {
     background-image:
       linear-gradient(to bottom, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.6) 100%),
       url('/assets/images/hero-bg-mobile.jpg');
+    background-position: left center;
+    background-size: cover;
+  }
+}
+
+/* ── HERO IMAGE — tablet uses dedicated mid-range crop ── */
+@media (min-width: 640px) and (max-width: 1023px) {
+  .hero {
+    background-image:
+      linear-gradient(to right, rgba(0,0,0,0.72) 0%, rgba(0,0,0,0.35) 55%, rgba(0,0,0,0.15) 100%),
+      url('/assets/images/hero-bg-tablet.jpg');
+    background-position: left center;
+    background-size: cover;
+  }
+  .page-hero {
+    background-image:
+      linear-gradient(to right, rgba(0,0,0,0.78) 0%, rgba(0,0,0,0.55) 60%, rgba(0,0,0,0.3) 100%),
+      url('/assets/images/hero-bg-tablet.jpg');
     background-position: left center;
     background-size: cover;
   }

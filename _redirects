@@ -1,0 +1,49 @@
+# TRM Garage Floors — Old Stone Systems URL redirects to new site
+# 301 redirects to preserve SEO equity and prevent 404s at cutover
+
+# Core pages
+/home                                   /index.html                                      301
+/contact                                /contact.html                                    301
+/gallery                                /gallery.html                                    301
+/projects                               /gallery.html                                    301
+/review                                 https://www.google.com/maps/place/TRM+Garage+Floors/@33.3381828,-112.1744206,9z/data=!4m14!1m7!3m6!1s0x49e9080c5ced2dd3:0xf4128779f01dd8b6!2sTRM+Garage+Floors!8m2!3d33.274751!4d-111.891768!16s%2Fg%2F11yywr_t5c!3m5!1s0x49e9080c5ced2dd3:0xf4128779f01dd8b6!8m2!3d33.274751!4d-111.891768!16s%2Fg%2F11yywr_t5c?hl=en&entry=ttu&g_ep=EgoyMDI2MDYyMi4wIKXMDSoASAFQAw%3D%3D 301
+/terms                                  /terms.html                                      301
+/privacy-policy                         /privacy-policy.html                             301
+/blog                                   /index.html                                      301
+
+# Service pages
+/Garage-Floor-Polyaspartic-Coating      /garage-floor-coating.html                       301
+/Patio-Deck-Polyaspartic-Coating        /patio-deck-resurfacing.html                     301
+
+# Service area / city pages
+/Gilbert                                /garage-floor-coating-gilbert-az.html            301
+/Mesa                                   /garage-floor-coating-mesa-az.html               301
+/Chandler                               /garage-floor-coating-chandler-az.html           301
+/Queen-Creek                            /garage-floor-coating-queen-creek-az.html        301
+/San-Tan                                /garage-floor-coating-san-tan-valley-az.html     301
+/Scottsdale                             /garage-floor-coating-scottsdale-az.html         301
+/Apache-Junction                        /garage-floor-coating-apache-junction-az.html    301
+/Fountain-Hills                         /garage-floor-coating-fountain-hills-az.html     301
+/Tempe                                  /garage-floor-coating-tempe-az.html               301
+/Sun-Lakes                              /garage-floor-coating-sun-lakes-az.html          301
+/Paradise-Valley                        /garage-floor-coating-paradise-valley-az.html    301
+
+# Leftover unrelated/template service pages from old site — send to homepage
+/basement-remodel/finishing             /index.html                                      301
+/decks                                  /patio-deck-resurfacing.html                     301
+/additions                              /index.html                                      301
+/full-home-remodels                     /index.html                                      301
+/siding                                 /index.html                                      301
+/outdoor-living-space                   /patio-deck-resurfacing.html                     301
+/load-bearing-walls                     /index.html                                      301
+/garage-building                        /garage-floor-coating.html                       301
+/service-11                             /index.html                                      301
+/service-12                             /index.html                                      301
+
+# Leftover unrelated geographic pages (out of state, not real service areas)
+/montclair                              /index.html                                      301
+/kinnelon                               /index.html                                      301
+/randolph                               /index.html                                      301
+
+# Catch-all — anything else not mapped goes to homepage
+/*                                      /index.html                                      404
